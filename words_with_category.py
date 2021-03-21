@@ -42,6 +42,7 @@ word_collection = {
         "Mukesh Ambani",
         "John D Rockefeller",
         "Narendra Modi",
+        "Donald Trump",
     ],
     "Games": [
         "Minecraft",
