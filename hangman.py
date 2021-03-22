@@ -1,7 +1,10 @@
 import random
 from words_with_category import word_collection as wc
 from faces import faces
+import story
 
+story.story()
+story.rules_or_start()
 
 def print_menu():
     """Prints main menu"""
@@ -48,7 +51,7 @@ def category_from_user():
     while True:
         selection = input("\nEnter your selection: ")
 
-        if selection.isdigit() and selection in ("1", "2", "3", "4", "5", "6"):
+        if selection.isdigit() and selection in ("1", "2", "3", "4", "5", "6", "7", "8", "9"):
             replaced_word = select_word(int(selection))
             return replaced_word
 
