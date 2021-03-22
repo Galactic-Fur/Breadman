@@ -146,8 +146,17 @@ def main():
 
         # ask user if he wants to continue playing
 
-        if input("\nContinue (Y)? ").lower() == "n":
-            play_game = False
+        replay = True
+        while replay:
+            ask_to_replay = input("\nContinue or no (Y/N)? ").lower()
+            if ask_to_replay in ['y', 'yes']:
+                replay = False
+            elif ask_to_replay in ['n', 'no']:
+                print("\nThank You for playing this game!\n", faces[6], "Breadman, signing out!")
+                play_game = False
+                replay = False
+            else:
+                print("That's not a valid option.")
             
 
 if __name__ == "__main__":
