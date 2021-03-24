@@ -49,9 +49,9 @@ def story():
 def now_the_game():
     print("\n1: Start\n2: Rules")
 
-    rules_or_start = int(input("\nChoose your option: "))
+    rules_or_start = input("\nChoose your option: ")
 
-    if rules_or_start == 2:
+    if rules_or_start == "2":
         print()
         print("Randomly, a word will be printed on the screen, with only one letter of it shown to you.")
         time.sleep(5)
@@ -63,7 +63,7 @@ def now_the_game():
         time.sleep(2)
         input("\nPress Enter to go back to the two-option menu.")
         now_the_game()
-    elif rules_or_start != 1:
+    elif rules_or_start != "1":
         print("\nInvalid option.")
         now_the_game()
     else:
