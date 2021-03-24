@@ -1,10 +1,11 @@
 import random
+import time
 from words_with_category import word_collection as wc
-from faces import faces
+from faces import faces, story_faces
 import story
 
 story.story()
-story.rules_or_start()
+story.now_the_game()
 
 def print_menu():
     """Prints main menu"""
@@ -151,11 +152,24 @@ def main():
 
         replay = True
         while replay:
-            ask_to_replay = input("\nContinue or no (Y/N)? ").lower()
+            ask_to_replay = input("\nDo you wish to continue playing? (Y/N)? ").lower()
             if ask_to_replay in ['y', 'yes']:
                 replay = False
             elif ask_to_replay in ['n', 'no']:
-                print("\nThank You for playing this game!\n", faces[6], "Breadman, signing out!")
+                good_bye = "Thank You for playing this game!"
+                the_end = "Breadman, signing out!"
+                print()
+                for x in good_bye:
+                    print(x, end = "")
+                    time.sleep(0.1)
+                print()
+                print()
+                time.sleep(0.5)
+                print(story_faces[1])
+                time.sleep(0.5)
+                for x in the_end:
+                    print(x, end = "")
+                    time.sleep(0.1)
                 play_game = False
                 replay = False
             else:
