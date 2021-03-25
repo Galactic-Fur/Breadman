@@ -1,7 +1,6 @@
 import random
-import time
 from words_with_category import word_collection as wc
-from faces import faces, story_faces
+from faces import faces
 import story
 
 story.story()
@@ -156,20 +155,7 @@ def main():
             if ask_to_replay in ['y', 'yes']:
                 replay = False
             elif ask_to_replay in ['n', 'no']:
-                good_bye = "Thank You for playing this game!"
-                the_end = "Breadman, signing out!"
-                print()
-                for x in good_bye:
-                    print(x, end = "")
-                    time.sleep(0.1)
-                print()
-                print()
-                time.sleep(0.5)
-                print(story_faces[1])
-                time.sleep(0.5)
-                for x in the_end:
-                    print(x, end = "")
-                    time.sleep(0.1)
+                story.the_end()
                 play_game = False
                 replay = False
             else:
