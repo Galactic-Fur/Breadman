@@ -68,3 +68,20 @@ def now_the_game():
         now_the_game()
     else:
         pass
+
+
+def the_end():
+    good_bye = "Thank You for playing this game!"
+    the_end = "Breadman, signing out!"
+    print()
+    for x in good_bye:
+        print(x, end = "")
+        time.sleep(0.1)
+    print()
+    print()
+    time.sleep(0.5)
+    print(sf[1])
+    time.sleep(0.5)
+    for x in the_end:
+        print(x, end = "")
+        time.sleep(0.1)
